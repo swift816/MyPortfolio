@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a50c1c68a3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="assets/logo.png" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <!-- <p>Computer Engineer</p> -->
+                <h1>Hello there, <br>I'm <span>Neil Vincent Donaire</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/image3.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="sub-title1">A Computer Engineering senior at University of San Jose – Recoletos.
+                        With years of experience in software and hardware development.
+                        Proactive and detail-oriented, with a strong foundation in both theoretical
+                        and practical aspects of engineering.</p>
+    
+                    <div class="tab-titles">
+                        <p Class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p Class="tab-links" onclick="opentab('experience')">Experiences</p>
+                        <p Class="tab-links" onclick="opentab('education')">Projects</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>
+                                C
+                                • C++
+                                • Python
+                                • JavaScript
+                                • HTML5/CSS</li>
+                            <li><span>Frameworks</span><br>
+                                NodeJS
+                                • AngularJS
+                                • React</li>
+                            <li><span>Database</span><br>
+                                MongoDB
+                                • MySQL
+                                • SQLite</li>
+                            <li><span>Design</span><br>
+                                Figma
+                                • Canva
+                                • Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span>2019 - 2019</span><br>Student Graphic Designer at Twin-Bee Print Ads Corp. Cebu</li>
+                            <li><span>2022 - 2023</span><br>IT Specialist at PAGSS (Philippine Airport Ground Support Solutions, Inc.), Cebu</li>
+                            <li><span>2024 - 2024</span><br>Web Developer OJT at University of San Jose – Recoletos Cebu</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><a class="title-call">Intelligent Robot Colored Ball Collector and Segregator</a>
+                                <br>Developed an intelligent robot using a Raspberry Pi 4 and Python to
+                                automatically collect and segregate colored balls to the segregation
+                                area based on their colors.
+                            </li>
+                            <li><a class="title-call">Laboratory Inventory and Borrowing System</a>
+                                <br>Developed and designed the frontend of a laboratory inventory system
+                                using AngularJS, focusing on designing user-friendly interfaces and
+                                working system functionalities.
+                            </li>
+                            <li><a class="title-call">Hotel Booking Management System</a>
+                                <br>Developed a Hotel Booking Management System using Python for an
+                                easy management of reservations and guest details.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-uncharted"></i>
+                    <h2>Software Development</h2>
+                    <p>I can develop and design a Desktop software application or a program, with Python, Java, C#
+                        and C programming
+                    </p></p>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>As from my experiences, I am capable to develop a website for you as a programmer.
+                    </p></p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Digital Logic Design</h2>
+                    <p>As a Computer Engineering senior, I have much experiences with robotic and digital logic design</p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>neilvincent2001@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+63 9662333472</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/neilvincent816"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nelvincente/"><i class="fa-brands fa-instagram"></i></i></a>
+                        <a href="https://www.youtube.com/channel/UCtJkDGZ5Soi5jl9zUnzWeUg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/neil-vincent-donaire-6459b2277/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © made by Neil Vincent B. Donaire</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
